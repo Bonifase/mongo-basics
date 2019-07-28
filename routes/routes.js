@@ -27,14 +27,24 @@ router.get("/players", (req, res) => {
     });
 });
 
-router.post("/players/:_id", async (req, res) => {
+router.post("/players/:_id", (req, res) => {
   let id = req.params._id;
-  await Player.updateOne(id, req.body)
+  Player.findByIdAndUpdate(id, req.body)
     .then(player => {
       res.send(`${player.fname} updated to database`);
     })
     .catch(err => {
-      res.status(400).send("unable to update to database", err);
+      res.status(400).send({ error: "unable to update to database" });
+    });
+});
+router.get("/players/:_id", (req, res) => {
+  let id = req.params._id;
+  Player.findById(id)
+    .then(player => {
+      res.send(player);
+    })
+    .catch(err => {
+      res.status(404).send({ error: "player with such id not found" });
     });
 });
 

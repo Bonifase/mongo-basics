@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Bonifase/mongo-basics#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "coverage": "^0.4.1",
     "express": "^4.17.1",
     "mocha": "^6.2.0",
