@@ -17,4 +17,25 @@ router.post("/add", (req, res) => {
     });
 });
 
+router.get("/players", (req, res) => {
+  Player.find()
+    .then(players => {
+      res.send(players);
+    })
+    .catch(err => {
+      res.status(400).send("unable to query the database");
+    });
+});
+
+router.post("/players/:_id", async (req, res) => {
+  let id = req.params._id;
+  await Player.updateOne(id, req.body)
+    .then(player => {
+      res.send(`${player.fname} updated to database`);
+    })
+    .catch(err => {
+      res.status(400).send("unable to update to database", err);
+    });
+});
+
 module.exports = router;
