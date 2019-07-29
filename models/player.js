@@ -12,6 +12,12 @@ const playerShema = new mongoose.Schema({
   },
   city: {
     type: String
+  },
+  team: {
+    type: String
+  },
+  photo: {
+    type: String
   }
 });
 

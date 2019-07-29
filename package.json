@@ -19,10 +19,13 @@
   "homepage": "https://github.com/Bonifase/mongo-basics#readme",
   "dependencies": {
     "chai": "^4.2.0",
+    "cors": "^2.8.5",
     "coverage": "^0.4.1",
     "express": "^4.17.1",
+    "install": "^0.13.0",
     "mocha": "^6.2.0",
     "mongoose": "^5.6.6",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "npm": "^6.10.2"
   }
 }
