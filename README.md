@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/Bonifase/mongo-basics.svg?branch=master)](https://travis-ci.org/Bonifase/mongo-basics)
+
 ## Project
 
-In the project directory, you can run:
+This is a simple MERN project to implement a simple web app for managing players:
 
 ### `npm start`
 
