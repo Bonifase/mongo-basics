@@ -1,3 +1,8 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .header {
   background-color: #282c34;
   min-height: 15vh;
@@ -9,25 +14,43 @@
   color: white;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
-/* products */
-.container {
+/* players section */
+.players-section {
   max-width: 960px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin: auto;
 }
-
+.cards {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 3px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin: 0 1em;
+  flex-grow: 0;
+  width: calc(25% - 1em);
+}
+/* card body */
+.card-bodys {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  height: 100%;
+}
 /*
  * Custom translucent site header
  */
@@ -47,41 +70,6 @@
 }
 
 /*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-.product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
-
-/*
  * Extra utilities
  */
 
@@ -98,4 +86,68 @@
 
 .overflow-hidden {
   overflow: hidden;
+}
+/* image style */
+
+.card-image {
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.showcase {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 1rem !important;
+  background-image: url("./components/img/ws_Fantasy_Football_Stadium_852x480.jpg");
+  color: #fff;
+  background-size: cover;
+}
+h1,
+h4 {
+  text-shadow: 1px 1px 2px grey, 0 0 25px black, 0 0 5px black;
+}
+.advert {
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  -webkit-animation: myfirst 8s linear 4s infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: myfirst 8s linear 4s infinite alternate;
+}
+/* Standard syntax */
+@keyframes myfirst {
+  0% {
+    color: white;
+    left: 250px;
+    top: 0px;
+  }
+  25% {
+    color: white;
+    left: 50%;
+    top: 0px;
+  }
+  50% {
+    color: white;
+    left: 60%;
+    top: 0px;
+  }
+  75% {
+    color: rgb(224, 224, 213);
+    left: 250px;
+    top: 0px;
+  }
+  100% {
+    color: red;
+    left: 60%;
+    top: 0px;
+  }
+}
+h3 {
+  color: white;
+  margin-left: 20%;
+}
+.advert-section {
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(rgb(8, 14, 68), rgb(89, 78, 230), rgb(64, 46, 223));
 }

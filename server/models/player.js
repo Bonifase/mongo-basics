@@ -16,6 +16,9 @@ const playerShema = new mongoose.Schema({
   team: {
     type: String
   },
+  goals: {
+    type: Number
+  },
   photo: {
     type: String
   }
